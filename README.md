@@ -1,3 +1,23 @@
+# Takes about 15 minutes to build something simple like this. Used MUI to implement UI quicker therefore it didnt take me long time to complete the task
+
+### Questions:
+
+#### How would you optimize the performance of the list rendering, in these 2 or 3 combined lists:
+My code already includes some optimization techniques. I used React.memo to memoize the Country component, and I am filtering the list of countries based on the search query. Here are a few additional suggestions:
+At this moment there is no need to do a pagination since there isnt much data. But once the data grows it would be better to split the list into paginated screens
+Lazy loading helps to improve performace as reduce load time as it loads first components within the screen
+
+Can you explain the difference between state and props in React, and how would you use them for the search?
+Ive used props for Cuontry component to pass values of each continent as a list of countries as an object that contained capital city and spoken languages
+in general props it is data that being passed to the component. overall there are 3 states 2 of them useStates and 1 is a useMemo. State is used to store data within the component.
+Ive used useState to store input string from search input and then passed it to useMemo so it can filter the list of countries that were passed as props.
+
+How does TypeScript enhance the development experience in a React application?
+it makes development easier and quicker since you can see the errors while developing the code.
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
